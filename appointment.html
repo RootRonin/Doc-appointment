@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Dr. Farhana Rahman</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dr. Farhana Rahman home">
+      <span class="brand-mark">FR</span>
+      <span>
+        <strong>Dr. Farhana Rahman</strong>
+        <small>Family Medicine</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="appointment.html" aria-current="page">Appointment</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <a class="nav-cta" href="appointment.html">
+      <span aria-hidden="true">+</span>
+      Book Visit
+    </a>
+  </header>
+
+  <main>
+    <section class="page-hero appointment-hero">
+      <div>
+        <p class="eyebrow">Secure appointment request</p>
+        <h1>Book your visit after bKash advance payment.</h1>
+        <p>Choose the type of care you need, reserve an available time, pay the advance fee through bKash, and submit the transaction ID to confirm your request.</p>
+      </div>
+    </section>
+
+    <section class="appointment-layout">
+      <form class="booking-form" id="bookingForm">
+        <div class="form-section">
+          <h2>Patient Details</h2>
+          <div class="field-grid">
+            <label>
+              Full name
+              <input type="text" name="name" autocomplete="name" required placeholder="Nusrat Jahan">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required placeholder="nusrat@example.com">
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" required placeholder="+880 17XX-XXXXXX" pattern="^(\+?8801|01)[0-9\-\s]{8,13}$">
+            </label>
+            <label>
+              Date of birth
+              <input type="date" name="birthdate" required>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Visit Details</h2>
+          <div class="field-grid">
+            <label>
+              Visit type
+              <select name="visitType" id="visitType" required>
+                <option value="500" selected>Telehealth follow-up - BDT 500 advance</option>
+                <option value="800">General consultation - BDT 800 advance</option>
+                <option value="1000">Annual wellness exam - BDT 1000 advance</option>
+                <option value="1200">Chronic care review - BDT 1200 advance</option>
+              </select>
+            </label>
+            <label>
+              Preferred date
+              <input type="date" name="appointmentDate" id="appointmentDate" required>
+            </label>
+            <label>
+              Preferred time
+              <select name="appointmentTime" required>
+                <option value="">Select a time</option>
+                <option>09:00 AM</option>
+                <option>10:30 AM</option>
+                <option>01:00 PM</option>
+                <option>03:30 PM</option>
+                <option>05:00 PM</option>
+              </select>
+            </label>
+            <label>
+              Reason for visit
+              <input type="text" name="reason" required placeholder="Annual checkup, fever, medication review">
+            </label>
+          </div>
+          <label class="wide-label">
+            Notes for the doctor
+            <textarea name="notes" rows="4" placeholder="Share symptoms, current medication, or accessibility needs."></textarea>
+          </label>
+        </div>
+
+        <div class="form-section">
+          <h2>bKash Advance Payment</h2>
+          <div class="bkash-box">
+            <strong>Pay to bKash Merchant: 01711-223344</strong>
+            <ol>
+              <li>Open bKash app or dial *247#.</li>
+              <li>Choose Payment and enter the merchant number.</li>
+              <li>Pay the exact advance fee shown in the summary.</li>
+              <li>Enter your bKash transaction ID below.</li>
+            </ol>
+          </div>
+          <div class="field-grid">
+            <label>
+              bKash number used
+              <input type="tel" name="bkashNumber" required placeholder="01XXXXXXXXX" pattern="^01[0-9]{9}$">
+            </label>
+            <label>
+              bKash transaction ID
+              <input type="text" name="bkashTrxId" required minlength="8" maxlength="16" placeholder="Example: 9A7B6C5D4E">
+            </label>
+          </div>
+        </div>
+
+        <button class="button primary submit-button" type="submit">
+          <span aria-hidden="true">+</span>
+          Confirm Paid Booking
+        </button>
+      </form>
+
+      <aside class="summary-card" aria-label="Appointment summary">
+        <p class="eyebrow">Summary</p>
+        <h2>Advance fee due today</h2>
+        <div class="fee-total">
+          <span id="feeTotal">BDT 500</span>
+          <small>credited to final balance</small>
+        </div>
+        <ul class="summary-list">
+          <li><span>Payment</span><strong>bKash required</strong></li>
+          <li><span>Booking</span><strong>Blocked without TrxID</strong></li>
+          <li><span>Changes</span><strong>No charge up to 12 hr</strong></li>
+        </ul>
+        <div class="secure-note">
+          <strong>Integration note</strong>
+          <p>This static demo requires a bKash transaction ID before booking. A live bKash checkout needs a merchant account, API credentials, and backend payment verification.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="confirmation" id="confirmation" hidden>
+      <h2>Paid appointment request received.</h2>
+      <p id="confirmationText"></p>
+      <a class="button ghost" href="admin.html">View in Admin</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Dr. Farhana Rahman Clinic. All rights reserved.</p>
+    <p>House 42, Road 11, Banani, Dhaka - +880 1711-223344</p>
+  </footer>
+</body>
+</html>
