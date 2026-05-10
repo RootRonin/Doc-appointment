@@ -3,52 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Nehal Rahman | Family Medicine in Dhaka</title>
-  <meta name="description" content="A modern medical website for Dr. Farhana Rahman with bKash advance-fee booking, appointment management, and health articles.">
+  <title>Dr. Farhana Rahman | Family Medicine in Dhaka</title>
+  <meta name="description" content="Dr. Farhana Rahman provides attentive family medicine in Dhaka with same-week appointments, clear pricing, and bKash advance-fee booking.">
+  <meta name="keywords" content="family medicine, doctor Dhaka, primary care, medical clinic">
+  <meta name="author" content="Dr. Farhana Rahman">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:title" content="Dr. Farhana Rahman | Family Medicine in Dhaka">
+  <meta property="og:description" content="Attentive family medicine with same-week appointments, clear pricing, and bKash booking.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Farhana Rahman | Family Medicine">
+  <meta name="twitter:description" content="Attentive family medicine with same-week appointments.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://your-domain.com/">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  
+  <!-- Preload hero image for performance -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=1800&q=80">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dr. Farhana Rahman",
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80",
+    "description": "Family medicine practice in Dhaka offering preventive care, chronic disease management, and urgent evaluations",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "House 42, Road 11",
+      "addressLocality": "Banani",
+      "addressRegion": "Dhaka",
+      "postalCode": "1213",
+      "addressCountry": "BD"
+    },
+    "telephone": "+8801711223344",
+    "url": "https://your-domain.com/",
+    "priceRange": "$$",
+    "medicalSpecialty": "Family Medicine",
+    "areaServed": "Dhaka",
+    "availableLanguage": ["en", "bn"]
+  }
+  </script>
+  
+  <!-- Manifest for PWA support (optional) -->
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#147d78">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Dr. Farhana Rahman home">
-      <span class="brand-mark">FR</span>
+  <header class="site-header" role="banner">
+    <a class="brand" href="index.html" aria-label="Dr. Farhana Rahman - Family Medicine home">
+      <span class="brand-mark" aria-hidden="true">FR</span>
       <span>
-        <strong>Dr. Nehal Rahman</strong>
+        <strong>Dr. Farhana Rahman</strong>
         <small>Family Medicine</small>
       </span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="appointment.html">Appointment</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="admin.html">Admin</a>
+      <a href="appointment.html" title="Schedule your appointment">Appointment</a>
+      <a href="about.html" title="Learn about Dr. Rahman">About</a>
+      <a href="blog.html" title="Read health articles">Blog</a>
+      <a href="admin.html" title="Admin dashboard">Admin</a>
     </nav>
-    <a class="nav-cta" href="appointment.html">
+    <a class="nav-cta" href="appointment.html" title="Schedule your appointment now">
       <span aria-hidden="true">+</span>
       Book Visit
     </a>
   </header>
 
-  <main>
-    <section class="hero">
+  <main role="main">
+    <section class="hero" aria-label="Welcome section">
       <div class="hero-copy">
         <p class="eyebrow">Primary care, preventive health, and continuity for Dhaka families.</p>
         <h1>Care that keeps your whole life in view.</h1>
         <p>Dr. Farhana Rahman provides attentive family medicine for adults and teens, with same-week appointments, clear taka pricing, and bKash advance-fee booking.</p>
         <div class="hero-actions">
-          <a class="button primary" href="appointment.html">
+          <a class="button primary" href="appointment.html" title="Schedule your appointment now">
             <span aria-hidden="true">+</span>
             Schedule Appointment
           </a>
-          <a class="button ghost" href="about.html">Meet Dr. Rahman</a>
+          <a class="button ghost" href="about.html" title="Learn more about Dr. Rahman">Meet Dr. Rahman</a>
         </div>
       </div>
-      <div class="hero-panel" aria-label="Clinic availability">
+      <aside class="hero-panel" aria-label="Clinic availability and booking information">
         <p>Today</p>
         <strong>6 same-week openings</strong>
         <span>Advance booking fee from BDT 500 via bKash</span>
-      </div>
+        <a href="tel:+8801711223344" class="contact-link" title="Call clinic">
+          📞 <span aria-label="Phone number">+880 171 1223344</span>
+        </a>
+      </aside>
     </section>
 
     <section class="quick-stats" aria-label="Practice highlights">
@@ -66,7 +127,7 @@
       </article>
     </section>
 
-    <section class="section split">
+    <section class="section split" aria-label="Services offered">
       <div>
         <p class="eyebrow">What patients book most</p>
         <h2>Everyday care, handled with calm precision.</h2>
@@ -74,41 +135,53 @@
       </div>
       <div class="service-grid">
         <article class="service-card">
-          <span class="icon-dot">01</span>
+          <span class="icon-dot" aria-hidden="true">01</span>
           <h3>Preventive Checkups</h3>
           <p>Annual exams, risk reviews, vaccination planning, and age-appropriate screening.</p>
         </article>
         <article class="service-card">
-          <span class="icon-dot">02</span>
+          <span class="icon-dot" aria-hidden="true">02</span>
           <h3>Chronic Care</h3>
           <p>Diabetes, blood pressure, thyroid, asthma, and medication follow-up plans.</p>
         </article>
         <article class="service-card">
-          <span class="icon-dot">03</span>
+          <span class="icon-dot" aria-hidden="true">03</span>
           <h3>Urgent Concerns</h3>
           <p>Same-week evaluation for infections, pain, rashes, headaches, and fatigue.</p>
         </article>
         <article class="service-card">
-          <span class="icon-dot">04</span>
+          <span class="icon-dot" aria-hidden="true">04</span>
           <h3>Telehealth</h3>
           <p>Secure video visits for results, refills, travel advice, and quick check-ins.</p>
         </article>
       </div>
     </section>
 
-    <section class="section care-band">
+    <section class="section care-band" aria-label="Booking process">
       <div>
         <p class="eyebrow">Booking made simple</p>
         <h2>Reserve your visit with a bKash advance fee.</h2>
         <p>The appointment page lets patients choose a visit type, date, and time. A bKash transaction ID is required before the booking can be submitted.</p>
       </div>
-      <a class="button light" href="appointment.html">Book and Pay Advance</a>
+      <a class="button light" href="appointment.html" title="Go to appointment booking">Book and Pay Advance</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Dr. Farhana Rahman Clinic. All rights reserved.</p>
-    <p>House 42, Road 11, Banani, Dhaka - +880 1711-223344</p>
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <p>&copy; 2026 Dr. Farhana Rahman Clinic. All rights reserved.</p>
+    </div>
+    <div class="footer-contact">
+      <p>
+        <strong>Location:</strong> House 42, Road 11, Banani, Dhaka 1213
+      </p>
+      <p>
+        <strong>Contact:</strong> 
+        <a href="tel:+8801711223344" title="Call clinic">+880 171 1223344</a>
+        | 
+        <a href="mailto:dr.farhana@example.com" title="Email Dr. Farhana Rahman">Email us</a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>
